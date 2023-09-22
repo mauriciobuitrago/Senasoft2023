@@ -1,19 +1,48 @@
-plugins {
-    id 'java'
-}
-
-group 'org.example'
 version '1.0-SNAPSHOT'
+group 'co.com.conduit'
+
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+buildscript {
+    repositories{
+        mavenCentral()
+    }
+    dependencies{
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.1.4")
+    }
 }
 
-test {
-    useJUnitPlatform()
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+defaultTasks 'clean', 'test', 'aggregate'
+
+ext{
+    serenityVersion = "2.1.4"
+    serenityCucumberVersion = "1.9.48"
+    jUnitVersion = '4.13'
 }
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
+    implementation "junit:junit:$rootProject.ext.jUnitVersion"
+    implementation "org.slf4j:slf4j-simple:1.7.26"
+    implementation "org.jvnet.com4j:com4j:2.1"
+
+    testImplementation "org.assertj:assertj-core:3.12.2"
+    testImplementation 'org.hamcrest:hamcrest-all:1.3'
+}
+
+test.finalizedBy(aggregate)
