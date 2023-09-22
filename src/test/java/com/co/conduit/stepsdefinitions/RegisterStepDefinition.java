@@ -1,5 +1,6 @@
 package com.co.conduit.stepsdefinitions;
 
+import com.co.conduit.tasks.Register;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -34,6 +35,7 @@ public class RegisterStepDefinition {
 
     @When("^He user enter the data for the register$")
     public void heUserEnterTheDataForTheRegister() {
+        OnStage.theActorInTheSpotlight().attemptsTo(Register.enter());
     }
 
     @Then("^he could see the name$")
