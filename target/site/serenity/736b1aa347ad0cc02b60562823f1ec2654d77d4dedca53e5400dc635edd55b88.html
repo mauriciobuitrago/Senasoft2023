@@ -217,7 +217,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-09-2023 15:35</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-09-2023 15:51</span>
     <br style="clear:left"/>
 </div>
 
@@ -276,7 +276,7 @@
                                                         <tr>
                                                             <td style="width:95%;" class="toc-title">
                                                                 <a href="#15b280a7aaeb21eb8ce2bc37361097205e06f8cc0516be4aab5c470e9dc03ae2" title="View scenario details" >Register successful</a>
-
+                                                                     (4 examples)
 
                                                             </td>
                                                             <td style="width:5%;">
@@ -323,9 +323,31 @@
                                                     </div>
                                                     <div class="scenario-docs card-body">
                                                             <p>Given He user is on the page</p>
-                                                            <p>When He user enter the data for the register</p>
+                                                            <p><p>When He user enter the data for the register</p>
+<table>
+<thead>
+<tr><th>username</th><th>email</th><th>password</th></tr>
+</thead>
+<tbody>
+<tr><td>{username}</td><td>{email}</td><td>{password}</td></tr>
+</tbody>
+</table>
+</p>
                                                             <p>Then he could see the name</p>
                                                         <div class="examples">
+                                                            <p><p>Examples:</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>username</th><th>email</th><th>password</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>mbuitrago1</td><td>maob24@yopmail.com</td><td>1234</td><td> </td></tr>
+<tr><td>mbuitrago2</td><td>maob25@yopmail.com</td><td>1234</td><td> </td></tr>
+<tr><td>mbuitrago3</td><td>maob26@yopmail.com</td><td>1234</td><td> </td></tr>
+<tr><td>mbuitrago4</td><td>maob27@yopmail.com</td><td>1234</td><td> </td></tr>
+</tbody>
+</table></div>
+</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -347,7 +369,7 @@
                                                 var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
                                                 // Our series array that contains series objects or in this case series data arrays
 
-                                                var series = [{meta: 'Passing tests (automated)', value: 1}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
                                                 // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
                                                 // as you saw in the previous example
@@ -388,7 +410,7 @@
                                                                         <a href="d3d6c47cef8149130b1665e852c7d1e4cdac6b715264dac91417b64d66f4ae72.html"><i
                                                                                 class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                <td class="automated-stats">1</td>
+                                                <td class="automated-stats">4</td>
                                                 <td class="automated-stats">100%</td>
                                             </tr>
                                             <tr>
@@ -443,7 +465,7 @@
                                             </tr>
                                             <tr class="summary-stats">
                                                 <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">1</td>
+                                                <td class="automated-stats">4</td>
                                                 <td class="automated-stats"></td>
                                             </tr>
                                             </tbody>
@@ -465,11 +487,11 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
+                                                        <td>53s</td>
+                                                        <td>53ms</td>
                                                         <td>11s</td>
-                                                        <td>11ms</td>
-                                                        <td>11s</td>
-                                                        <td>11s</td>
-                                                        <td>11s</td>
+                                                        <td>13s</td>
+                                                        <td>53s</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -495,10 +517,11 @@
                                                 <tr class="scenario-result SUCCESS">
                                                     <td>
                                                             <a href="781bcec3a5bbc695d5007ffcc94cab6e7d5120116c3dbb1cf9e8d47a97b8d7a0.html">register successful</a>
+                                                               (4 examples)
                                                     </td>
                                                     <td>3</td>
-                                                    <td>15:35:43</td>
-                                                    <td>11s 675ms</td>
+                                                    <td>15:51:53</td>
+                                                    <td>53s 148ms</td>
                                                     <td>
                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                 style="display:none">SUCCESS</span>
