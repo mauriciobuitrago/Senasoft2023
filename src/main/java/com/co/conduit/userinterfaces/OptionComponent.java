@@ -10,6 +10,8 @@ public class OptionComponent {
     public static final Target LBL_NAME = Target.the("validacion de nombre")
             .locatedBy("//a[contains(@href,'/profile/')]");
 
+    public static final Target BTN_LOGIN = Target.the("clic en login")
+            .locatedBy("//a[contains(@href,'/login')]");
 
 
 

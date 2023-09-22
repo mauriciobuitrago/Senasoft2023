@@ -17,4 +17,7 @@ public class ValidationName implements Question<Boolean> {
     public static ValidationName compare(){
         return new ValidationName();
     }
+
+
+
 }
