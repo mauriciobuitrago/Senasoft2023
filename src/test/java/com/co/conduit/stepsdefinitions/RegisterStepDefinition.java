@@ -22,16 +22,6 @@ import java.util.List;
 public class RegisterStepDefinition {
 
 
-    @Managed
-    WebDriver hisBrowser;
-
-    @Before
-    public void setUp() {
-        OnStage.setTheStage(Cast.ofStandardActors());
-        OnStage.theActorCalled("User");
-        OnStage.theActorInTheSpotlight().can(BrowseTheWeb.with(hisBrowser));
-    }
-
     @Given("^He user is on the page$")
     public void heUserIsOnThePage() {
         OnStage.theActorInTheSpotlight().wasAbleTo(Open.url("https://angular.realworld.io/"));
@@ -51,6 +41,6 @@ public class RegisterStepDefinition {
     public void heCouldSeeTheName() {
 
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidationName.compare()
-                , Matchers.is(true)));
+                , Matchers.is(false)));
     }
 }

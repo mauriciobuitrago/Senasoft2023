@@ -7,7 +7,6 @@ Feature: Register
       | username   | email   | password   |
       | <username> | <email> | <password> |
     Then he could see the name
-
     Examples:
       | username  | email              | password |
       | mbuitrago1 | maob24@yopmail.com | 1234     |

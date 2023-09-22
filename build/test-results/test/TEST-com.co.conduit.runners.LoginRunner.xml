@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.co.conduit.runners.RegisterRunner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="QV-4534" time="0.0">
+<testsuite name="com.co.conduit.runners.LoginRunner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="QV-4534" time="0.0">
   <properties/>
   <system-out><![CDATA[
-4 Scenarios (?[32m4 passed?[0m)
-12 Steps (?[32m12 passed?[0m)
-0m53,415s
+?[31mFailed scenarios:?[0m
+?[31msrc/test/resources/features/login.feature:11 ?[0m# Login Sucessfull
+?[31msrc/test/resources/features/login.feature:12 ?[0m# Login Sucessfull
+
+2 Scenarios (?[31m2 failed?[0m)
+6 Steps (?[31m2 failed?[0m, ?[32m4 passed?[0m)
+0m20,371s
+
+java.lang.AssertionError: 
+Expected: is <false>
+     but: was <true>
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
+	at com.co.conduit.stepsdefinitions.RegisterStepDefinition.heCouldSeeTheName(RegisterStepDefinition.java:53)
+	at ?.he could see the name(src/test/resources/features/login.feature:8)
+
+java.lang.AssertionError: 
+Expected: is <false>
+     but: was <true>
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
+	at com.co.conduit.stepsdefinitions.RegisterStepDefinition.heCouldSeeTheName(RegisterStepDefinition.java:53)
+	at ?.he could see the name(src/test/resources/features/login.feature:8)
 
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
@@ -24,7 +46,7 @@
  Learn Serenity BDD online at http://serenity-dojo.com                               
 -------------------------------------------------------------------------------------
 
-[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - Test Suite Started: Register
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - Test Suite Started: Login
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
  _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
 |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
@@ -33,7 +55,7 @@
   |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
                                                                   
 
-TEST STARTED: register successful
--------------------------------------------------------------------(register;register-successful)
+TEST STARTED: Login Sucessfull
+-------------------------------------------------------------------(login;login-sucessfull)
 ]]></system-err>
 </testsuite>
